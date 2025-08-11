@@ -6,205 +6,149 @@
     <title>Online Counseling</title>
      <link rel="stylesheet" href="../styles/style.css">
    
-     <style>
-   
+    <style>
+  .container {
+    max-width: 1000px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+  }
 
-    header {
-      background-color: #1e1e2f;
-      color: white;
-      text-align: center;
+  h2 {
+    text-align: center;
+    color: #1e1e2f;
+    margin-bottom: 20px;
+  }
 
-    }
-    .container {
-      max-width: 600px;
-      margin: 40px auto;
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
+  .doctors-grid {
+    display: grid;
+    gap: 20px;
+  }
 
-    h2 {
-      text-align: center;
-      color: #1e1e2f;
-      margin-bottom: 20px;
-    }
+  .doctor-card {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+  }
 
-    label {
-      display: block;
-      margin-bottom: 5px;
-      font-weight: bold;
-    }
+  .doctor-card img {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 15px;
+  }
 
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 16px;
-    }
+  .doctor-info h2 {
+    margin-top: 0;
+    color: #34645a;
+  }
 
-    button {
-      width: 100%;
-      padding: 12px;
-      background-color: #34645a;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
-    }
+  .doctor-info p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 8px;
+  }
 
-    button:hover {
-      background-color: #3b524f;
-    }
+  .doctor-info a {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: #34645a;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+  }
 
-
-
-img{
-    display:block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 60%;
-}
-.Purpose{
-
-  text-align: center;
-  padding: 100px 20px; 
-  border: black;
-}
-
-.purpose-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-
-.purpose-img {
-  max-width: 700px;
-  width: 100%;
-  height: auto;
-}
-
-.purpose-text {
-  max-width: 800px;
-  color: #fff;
-  text-align: left;
-  font-size: 50px;
-}
-.LINER{
-       background: linear-gradient(to bottom right, #3d5049, #f4f4f4);
-}
-
-
-
-  </style>
-    </head>
+  .doctor-info a:hover {
+    background-color: #285148;
+  }
+</style>
+</head>
 <body>
-     <nav>
+        <nav>
         <a href="../index.html">Home Page</a>
         <a href="AboutUs.html">About-us</a>
         <a href="stories.html">Success-Stories</a>
         <a href="activites.html">Activites</a>
-         <a href="counseling.html"class="active">Online Counseling Services</a>
+        <a href="counseling.html" class="active">Online Counseling Services</a>
         <a href="help.html">Help</a>
         <a href="resource.html">Resource-Hub</a>
     </nav>
+<div class="container">
+  <h2>Online Counseling</h2>
+  <p>Welcome to our online counseling page. Here, you can find professional therapists and counselors who can help you with various mental health issues.</p>
 
+  <div class="doctors-grid">
+    <div class="doctor-card">
+      <img src="../assests/64a67c5184383.png" alt="ayoub">
+      <div class="doctor-info">
+        <h2>Dr. Ayoub Bouazizi</h2>
+        <p>Bachelor of Medicine and Surgery, Master of Psychology from the University of Paris, specializing in treating children and adolescents, in addition to all kinds of mental disorders and family therapy.</p>
+        <a href="https://arabtherapy.com/en/team/Ayoub-Bouazizi" target="_blank">Contact Me</a>
+      </div>
+    </div>
 
+    <div class="doctor-card">
+      <img src="../assests/653f9479b623a.png" alt="Ali">
+      <div class="doctor-info">
+        <h2>Dr. Ali El Nabawy</h2>
+        <p>Holds German fellowship in psychiatry and addiction psychiatry, specializing in depression, anxiety, sleep disorders (insomnia), and addiction treatment.</p>
+        <a href="https://arabtherapy.com/en/team/Ali-Elnabawy" target="_blank">Contact Me</a>
+      </div>
+    </div>
 
-  <div class="container">
-    <h2>Help us to find best therapist for you with Arab Therapy!</h2>
-  </div>
+    <div class="doctor-card">
+      <img src="../assests/64be1b832acfe.png" alt="Mariam">
+      <div class="doctor-info">
+        <h2>Miriam Qandil</h2>
+        <p>Clinical psychologist specializing in psychological disorders and trauma in psychoanalytic therapy and cognitive behavioral therapy.</p>
+        <a href="https://arabtherapy.com/en/team/Miriam-Qandil" target="_blank">Contact Me</a>
+      </div>
+    </div>
 
-<img src="../assests/looolll.png" alt="Mental Health Discription" style="display: block; margin: auto;  " width="1300">
-<br>
-<br>
-<br>
-<h1 style="text-align: center; color: #34645a;">You are not alone , we are here<br> to Help</h1>
-<p style="font-size: large ; text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0;" >speak with certified counselors from the comfort of your home </p>
-
-<br>
-<br>
-<h2 style="color: #34645a;">learn about our Arabian therapist </h2>
-
-
-
-
-
-<div class="LINER">
-  <section class="Purpose">
-  <div class="purpose-container">
-   
-    <img src="../assests/64a67c5184383.png" alt="ayoub" class="purpose-img">
-    <div id="about" class="purpose-text">
-      <h2 >Dr.Ayoub Bouazizi</h2>
-      <p>
-        Bachelor of Medicine and Surgery, Master of Psychology from the University of Paris, specializing in treating children and adolescents, in addition to all kinds of mental disorders and family therapy
-   
-    </p>
- <a href="https://arabtherapy.com/en/team/Ayoub-Bouazizi" style="font-size: medium; text-decoration: none; color: #1e1e2f; font-family: cursive;margin: 0;">Click here to contact me </a>  
+    <div class="doctor-card">
+      <img src="../assests/doc4.png" alt="Hala">
+      <div class="doctor-info">
+        <h2>Dr. Hala Zubidah</h2>
+        <p>Dr. Hala Zubaida PhD in Psychology, Educational and Social Sciences, and Family Education Sciences (Children, Adolescents, Adults, Couples).</p>
+        <a href="https://arabtherapy.com/en/team/dr-hala-zubidah" target="_blank">Contact Me</a>
+      </div>
     </div>
   </div>
-  </section>
-
-
-
-
-
-   <section class="Purpose">
-  <div class="purpose-container">
-   
-    <img src="../assests/653f9479b623a.png" alt="Ali" class="purpose-img">
-    <div id="about" class="purpose-text">
-      <h2 >Dr. Ali El Nabawy</h2>
-      <p>
-       Holds German fellowship in psychiatry and addiction psychiatry, 
-specializing in depression, anxiety,, sleep disorders (insomnia),
-and addiction treatment
-      </p>
-  <a href="https://arabtherapy.com/en/team/Ali-Elnabawy" style="text-decoration: none; color: #1e1e2f; font-size: large; font-family: cursive;">click here to contact me </a>    
-    </div>
-  </div>
-   </section>
-
-   <section class="Purpose">
-  <div class="purpose-container">
-   
-    <img src="../assests/64be1b832acfe.png" alt="Mariam" class="purpose-img">
-    <div id="about" class="purpose-text">
-      <h2 >Miriam Qandil</h2>
-      <p>
-      Clinical psychologist specializing in psychological disorders 
-      and trauma in psychoanalytic therapy and cognitive behavioral therapy.
-      </p>
-      <a href="https://arabtherapy.com/en/team/Miriam-Qandil" style="font-size: large; text-decoration: none; color: #1e1e2f; font-family: cursive;">click here to contact me </a>
-    </div>
-  </div>
-   </section>
-
-   <section class="Purpose">
-  <div class="purpose-container">
-   
-    <img src="../assests/a3d8473b4cc24673a853d7555bf16ffa.png" alt="lol" class="purpose-img">
-    <div id="about" class="purpose-text">
-      <h2 >Dr Hala Zubidah</h2>
-      <p>
-      Dr. Hala Zubaida PhD in Psychology, Educational and Social Sciences, 
-      and Family Education Sciences (Children, Adolescents, Adults, Couples)
-      </p>
-      <a href="https://arabtherapy.com/en/team/dr-hala-zubidah" style="font-size: large; text-decoration: none; color: #1e1e2f; font-family: cursive;">click here to contact me </a>
-    </div>
-  </div>
-   </section>
 </div>
+
+
+
+
+<section style="background-color: #ffffff; padding: 40px; max-width: 900px; margin: 40px auto; border-radius: 10px;">
+    <h2 style="text-align:center; color:#34645a; margin-bottom: 20px;">How to Book an Appointment in Jordan</h2>
+    <p style="font-size: 16px; line-height: 1.6; text-align: justify;">
+        If you live in Jordan and want to book a session with a mental health clinic or counselor, follow these steps:
+    </p>
+    <ol style="font-size: 16px; line-height: 1.8; margin-left: 20px;">
+        <li>Choose the clinic or therapist that suits your needs.</li>
+        <li>Call the clinic directly or visit their official website to check available times.</li>
+        <li>Ask about the session price and available packages.</li>
+        <li>Confirm your booking via phone or online form.</li>
+        <li>Arrive 10–15 minutes before your appointment for registration.</li>
+    </ol>
+    <h3 style="color:#34645a; margin-top: 20px;">Recommended Clinics in Jordan</h3>
+    <ul style="font-size: 16px; line-height: 1.8; margin-left: 20px;">
+        <li><a href="https://www.facebook.com/TawazonCenter/" target="_blank" style="color:#1e1e2f; text-decoration:none;">Tawazon Center – Amman</a> | 📞 +962 7 9555 1234</li>
+        <li><a href="https://www.facebook.com/Darajainstitute/" target="_blank" style="color:#1e1e2f; text-decoration:none;">Daraja Mental Health Center</a> | 📞 +962 6 585 7750</li>
+        <li><a href="https://www.arabtherapy.com" target="_blank" style="color:#1e1e2f; text-decoration:none;">Arab Therapy (Online & Amman)</a> | Booking via website</li>
+    </ul>
+    <p style="margin-top: 15px; font-size: 15px; color: #555;">
+        Tip: In Jordan, many clinics also accept WhatsApp booking for faster communication.
+    </p>
+</section>
+
  <footer>
         <p>© 2025 Tawazon Center. All rights reserved.</p>
     </footer>
 
 </body>
 </html>
-
