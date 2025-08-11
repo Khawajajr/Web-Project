@@ -19,7 +19,7 @@
 
     }
     .container {
-      max-width: 600px;
+      width: 600px;
       margin: 40px auto;
       background: white;
       padding: 30px;
@@ -33,6 +33,20 @@
       margin-bottom: 20px;
     }
 
+    footer {
+     width: 100%;
+      text-align: center;
+      padding: 10px;
+      background-color: #3d5049;
+      color: white;
+      font-size: 0.9rem;
+      margin-top: 40px;
+      border-top: 4px solid #a7d7c5;
+           
+        position:fixed;
+    left: 0;
+    bottom: 0;  
+    }
     label {
       display: block;
       margin-bottom: 5px;
@@ -63,10 +77,19 @@
       background-color: #3b524f;
     }
 
-   
+   main {
+  flex: 1; 
+  display: flex;
+  justify-content: center;
+  align-items: center;   
+  padding: 20px; 
+  margin: 150px;
+
+}
   </style>
 </head>
 <body>
+
      <nav>
         <a href="../index.html">Home Page</a>
         <a href="AboutUs.html">About-us</a>
@@ -75,7 +98,8 @@
         <a href="counseling.html">Online Counseling Services</a>
         <a href="resource.html">Resource-Hub</a>
     </nav>
-    <div class="container">
+
+ <main> <div class="container">
     <h2>Contact Us</h2>
     <form action="#">
       <label for="name">Your Name</label>
@@ -90,6 +114,9 @@
       <button type="submit">Send Message</button>
     </form>
   </div>
-
+</main>
+ <footer>
+        <p>© 2025 Tawazon Center. All rights reserved.</p>
+    </footer>
 </body>
 </html>

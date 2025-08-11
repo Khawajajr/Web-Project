@@ -16,4 +16,13 @@
       text-decoration: none;
       font-weight: bold;
     }
-    
+       footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #3d5049;
+      color: white;
+      font-size: 0.9rem;
+      margin-top: 40px;
+      border-top: 4px solid #a7d7c5;
+      
+    }
