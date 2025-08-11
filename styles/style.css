@@ -26,3 +26,16 @@
       border-top: 4px solid #a7d7c5;
       
     }
+nav a.active {
+  color: #a7d7c5; 
+  border-bottom: 3px solid #a7d7c5;
+  padding-bottom: 5px;
+}
+  body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #f4f4f4, #e3f0ea);
+      color: #2c3e50;
+      margin: 0;
+      padding: 0;
+      line-height: 1.2;
+    }
