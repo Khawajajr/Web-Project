@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mental Health Self-Check</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    form {
+      margin-top: 20px;
+      max-width: 500px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    .error {
+      color: red;
+      font-size: 0.9em;
+      margin-left: 5px;
+    }
+    textarea {
+      width: 100%;
+      height: 150px;
+      margin-top: 10px;
+    }
+    button {
+      margin-top: 15px;
+      padding: 8px 14px;
+      background: green;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h2>Mental Health Self-Check</h2>
+  <div id="datetime"></div>
+</header>
+
+<form id="selfcheck">
+  <label for="mood">How do you feel today?</label>
+  <select id="mood">
+    <option value="">-- Select Mood --</option>
+    <option value="Happy">Happy</option>
+    <option value="Neutral">Neutral</option>
+    <option value="Sad">Sad</option>
+    <option value="Anxious">Anxious</option>
+  </select>
+  <span class="error" id="moodError"></span>
+
+  <label for="sleep">Average Sleep Hours (per night):</label>
+  <input type="number" id="sleep" min="0" max="24">
+  <span class="error" id="sleepError"></span>
+
+  <label>Stress Level:</label>
+  <input type="radio" name="stress" value="Low"> Low
+  <input type="radio" name="stress" value="Medium"> Medium
+  <input type="radio" name="stress" value="High"> High
+  <span class="error" id="stressError"></span>
+
+  <label>Who do you feel supported by?</label>
+  <input type="checkbox" name="support" value="Family"> Family
+  <input type="checkbox" name="support" value="Friends"> Friends
+  <input type="checkbox" name="support" value="Colleagues"> Colleagues
+  <input type="checkbox" name="support" value="None"> None
+  <span class="error" id="supportError"></span>
+
+  <br>
+  <button type="button" onclick="checkWellness()">Check My Wellness</button>
+
+  <textarea id="report" readonly></textarea>
+</form>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script> 
+<script>
+    
+  function updateDateTime() {
+    var now = new Date();
+    document.getElementById("datetime").innerText = now.toLocaleString();
+  }
+  setInterval(updateDateTime, 1000);
+  updateDateTime();
+
+  function checkWellness() {
+    var isValid = true;
+    var mood = document.getElementById("mood").value;
+    var sleep = document.getElementById("sleep").value;
+    var stressRadios = document.getElementsByName("stress");
+    var supportChecks = document.getElementsByName("support");
+
+    document.getElementById("moodError").innerText = "";
+    document.getElementById("sleepError").innerText = "";
+    document.getElementById("stressError").innerText = "";
+    document.getElementById("supportError").innerText = "";
+
+    if (mood === "") {
+      document.getElementById("moodError").innerText = "Please select a mood.";
+      isValid = false;
+    }
+
+    if (sleep === "" || sleep < 0 || sleep > 24) {
+      document.getElementById("sleepError").innerText = "Enter valid sleep hours (0-24).";
+      isValid = false;
+    }
+
+    var stress = null;
+    for (var i = 0; i < stressRadios.length; i++) {
+      if (stressRadios[i].checked) {
+        stress = stressRadios[i].value;
+        break;
+      }
+    }
+    if (stress === null) {
+      document.getElementById("stressError").innerText = "Select a stress level.";
+      isValid = false;
+    }
+
+    var supportText = "";
+    for (var i = 0; i < supportChecks.length; i++) {
+      if (supportChecks[i].checked) {
+        if (supportText !== "") {
+          supportText += ", "; 
+        }
+        supportText += supportChecks[i].value;
+      }
+    }
+    if (supportText === "") {
+      document.getElementById("supportError").innerText = "Select at least one option.";
+      isValid = false;
+    }
+
+
+    if (isValid) {
+      var wellnessScore = 0;
+
+
+      if (mood === "Happy") wellnessScore += 3;
+      else if (mood === "Neutral") wellnessScore += 2;
+      else wellnessScore += 1;
+
+      if (sleep >= 7 && sleep <= 9) wellnessScore += 3;
+      else if (sleep >= 5) wellnessScore += 2;
+      else wellnessScore += 1;
+
+
+      if (stress === "Low") wellnessScore += 3;
+      else if (stress === "Medium") wellnessScore += 2;
+      else wellnessScore += 1;
+
+      if (supportText.indexOf(",") !== -1) wellnessScore += 3; 
+      else wellnessScore += 1;
+
+      var suggestion = "";
+      if (wellnessScore >= 10) {
+        suggestion = "You're doing well! Keep up your healthy habits.";
+      } else if (wellnessScore >= 7) {
+        suggestion = "You're doing okay, but consider adjusting sleep or stress levels.";
+      } else {
+        suggestion = "Your wellness may need attention. Reach out for support and self-care.";
+      }
+
+
+      document.getElementById("report").value =
+        "Mood: " + mood + "\n" +
+        "Sleep Hours: " + sleep + "\n" +
+        "Stress Level: " + stress + "\n" +
+        "Support: " + supportText + "\n\n" +
+        "Wellness Score: " + wellnessScore + "/12\n" +
+        "Suggestion: " + suggestion;
+    }
+  }
+</script>
+
+</body>
+</html>

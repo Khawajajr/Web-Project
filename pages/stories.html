@@ -5,23 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Success Stories</title>
      <link rel="stylesheet" href="../styles/style.css">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
      <style>
-.hero {
-  background: linear-gradient(to bottom right, #a7d7c5, #f4f4f4);
-  text-align: center;
-  padding: 100px 20px;
-}
-.hero h1 {
-  font-size: 3em;
-  color: #2c3e50;
-}
-.hero p {
-  font-size: 1.2em;
-  margin: 20px 0;
-}
-
-
-        .purpose-container {
+  .purpose-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -73,38 +59,64 @@
         <a href="counseling.html">Online Counseling Services</a>
         <a href="help.html">Help</a>
         <a href="resource.html">Resource-Hub</a>
+        <a href="../js/Java.html">Self-Check</a>
     </nav>
 
+   <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbarNav" aria-controls="navbarNav" 
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+  <div class="container my-5">
+    <div class="d-flex justify-content-center">
+      <div id="carouselExampleCaptions" class="carousel slide w-75">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" 
+                  class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" 
+                  aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" 
+                  aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" 
+                  aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../assests/WhatsApp Image 2025-08-05 at 20.23.29_98444eee.jpg" class="d-block w-100" alt="A Healed patient">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>First slide label</h5>
+              <p>Some representative placeholder content for the first slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="../assests/WhatsApp Image 2025-08-05 at 20.23.32_e1d73c97.jpg" class="d-block w-100" alt="A Healed patients">
+          </div>
+          <div class="carousel-item">
+            <img src="../assests/WhatsApp Image 2025-08-05 at 20.23.30_e6dd14e0.jpg" class="d-block w-100" alt="A Healed patientss">
+          </div>
+          <div class="carousel-item">
+            <img src="../assests/lady-gaga-gty-jt-240718_1721336065937_hpMain_1x1.avif" class="d-block w-100" alt="A Healed patientsss">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" 
+                data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" 
+                data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
 
-
-
-    <section class="hero">
-  <div class="hero-content">
-    <h1>Demi Lovato</h1>
-    <p>Demi Lovato, a world-famous singer and actress, has openly shared her struggles with bipolar disorder. <a href="#Demi" class="btn"> ...</a>
-</p>
-      <h1>J.K. Rowling</h1>
-    <p>Before she became one of the world’s most successful authors, J.K. Rowling (author of Harry Potter) struggled deeply with depression.<a href="#J.K." class="btn"> ...</a>
-</p>
-      <h1>Kevin Hines</h1>
-    <p>Kevin Hines attempted suicide at the age of 19 by jumping off the Golden Gate Bridge. Miraculously, he survived.  <a href="#Kevin" class="btn"> ...</a>
-</p>
-      <h1> Lady Gaga</h1>
-    <p>Pop icon Lady Gaga has spoken publicly about her struggles with PTSD, anxiety, and depression, especially after experiencing trauma at a young age. <a href="#Gaga" class="btn"> ...</a>
-</p>
-    
-
-
+      </div>
+    </div>
   </div>
-</section>
-
-
-
-<section  >
-   <section class="Purpose">
+ <section class="Purpose">
   <div class="purpose-container">
-    
-    <img class="img" src="../assests/WhatsApp Image 2025-08-05 at 20.23.31_36dbcb14.jpg"alt="Better Togther" >
     <img  src="../assests/WhatsApp Image 2025-08-05 at 20.23.29_98444eee.jpg" alt="A Healed patient" class="purpose-img">
     <div id="about" class="purpose-text">
       <h2 id="Demi" > Demi Lovato – Turning Pain into Power</h2>
@@ -170,5 +182,6 @@ Rather than hiding her pain, she created the Born This Way Foundation, which foc
  <footer>
         <p>© 2025 Tawazon Center. All rights reserved.</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>

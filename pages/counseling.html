@@ -1,154 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Counseling</title>
-     <link rel="stylesheet" href="../styles/style.css">
-   
-    <style>
-  .container {
-    max-width: 1000px;
-    margin: 40px auto;
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Counseling</title>
+  <link rel="stylesheet" href="../styles/style.css">
 
-  h2 {
-    text-align: center;
-    color: #1e1e2f;
-    margin-bottom: 20px;
-  }
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+    }
 
-  .doctors-grid {
-    display: grid;
-    gap: 20px;
-  }
+    h2 {
+      text-align: center;
+      color: #1e1e2f;
+      margin-bottom: 20px;
+    }
 
-  .doctor-card {
-    display: flex;
-    align-items: center;
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 8px;
-  }
+    .doctors-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
 
-  .doctor-card img {
-    width: 150px;
-    height: auto;
-    border-radius: 8px;
-    margin-right: 15px;
-  }
+    .doctor-card {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.2s ease-in-out;
+    }
 
-  .doctor-info h2 {
-    margin-top: 0;
-    color: #34645a;
-  }
+    .doctor-card:hover {
+      transform: translateY(-5px);
+    }
 
-  .doctor-info p {
-    font-size: 15px;
-    line-height: 1.6;
-    color: #333;
-    margin-bottom: 8px;
-  }
+    .doctor-card img {
+      width: 100%;
+      max-width: 200px;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
 
-  .doctor-info a {
-    display: inline-block;
-    padding: 6px 12px;
-    background-color: #34645a;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-  }
+    .doctor-info h3 {
+      margin: 10px 0;
+      color: #34645a;
+    }
 
-  .doctor-info a:hover {
-    background-color: #285148;
-  }
-</style>
+    .doctor-info p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #333;
+      margin-bottom: 12px;
+    }
+
+    .doctor-info a {
+      display: inline-block;
+      padding: 8px 15px;
+      background-color: #34645a;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    .doctor-info a:hover {
+      background-color: #285148;
+    }
+
+    section {
+      background-color: #ffffff;
+      padding: 40px;
+      max-width: 900px;
+      margin: 40px auto;
+      border-radius: 10px;
+    }
+
+    footer {
+      background: #34645a;
+      text-align: center;
+      color: white;
+      padding: 15px;
+      margin-top: 30px;
+    }
+    li a:visited{
+      color: #1e1e2f;
+    }
+  </style>
 </head>
 <body>
-        <nav>
-        <a href="../index.html">Home Page</a>
-        <a href="AboutUs.html">About-us</a>
-        <a href="stories.html">Success-Stories</a>
-        <a href="activites.html">Activites</a>
-        <a href="counseling.html" class="active">Online Counseling Services</a>
-        <a href="help.html">Help</a>
-        <a href="resource.html">Resource-Hub</a>
-    </nav>
-<div class="container">
-  <h2>Online Counseling</h2>
-  <p>Welcome to our online counseling page. Here, you can find professional therapists and counselors who can help you with various mental health issues.</p>
 
-  <div class="doctors-grid">
-    <div class="doctor-card">
-      <img src="../assests/64a67c5184383.png" alt="ayoub">
-      <div class="doctor-info">
-        <h2>Dr. Ayoub Bouazizi</h2>
-        <p>Bachelor of Medicine and Surgery, Master of Psychology from the University of Paris, specializing in treating children and adolescents, in addition to all kinds of mental disorders and family therapy.</p>
-        <a href="https://arabtherapy.com/en/team/Ayoub-Bouazizi" target="_blank">Contact Me</a>
-      </div>
-    </div>
+  <nav>
+    <a href="../index.html">Home Page</a>
+    <a href="AboutUs.html">About-us</a>
+    <a href="stories.html">Success-Stories</a>
+    <a href="activites.html">Activites</a>
+    <a href="counseling.html" class="active">Online Counseling Services</a>
+    <a href="help.html">Help</a>
+    <a href="resource.html">Resource-Hub</a>
+    <a href="../js/Java.html">Self-Check</a>
+  </nav>
 
-    <div class="doctor-card">
-      <img src="../assests/653f9479b623a.png" alt="Ali">
-      <div class="doctor-info">
-        <h2>Dr. Ali El Nabawy</h2>
-        <p>Holds German fellowship in psychiatry and addiction psychiatry, specializing in depression, anxiety, sleep disorders (insomnia), and addiction treatment.</p>
-        <a href="https://arabtherapy.com/en/team/Ali-Elnabawy" target="_blank">Contact Me</a>
-      </div>
-    </div>
+  <div class="container">
+    <h2>Online Counseling</h2>
+    <p style="text-align:center;">Welcome to our online counseling page. Here, you can find professional therapists and counselors who can help you with various mental health issues.</p>
 
-    <div class="doctor-card">
-      <img src="../assests/64be1b832acfe.png" alt="Mariam">
-      <div class="doctor-info">
-        <h2>Miriam Qandil</h2>
-        <p>Clinical psychologist specializing in psychological disorders and trauma in psychoanalytic therapy and cognitive behavioral therapy.</p>
-        <a href="https://arabtherapy.com/en/team/Miriam-Qandil" target="_blank">Contact Me</a>
+    <div class="doctors-grid">
+      
+      <div class="doctor-card">
+        <img src="../assests/64a67c5184383.png" alt="ayoub">
+        <div class="doctor-info">
+          <h3>Dr. Ayoub Bouazizi</h3>
+          <p>Bachelor of Medicine and Surgery, Master of Psychology from the University of Paris, specializing in treating children and adolescents, in addition to all kinds of mental disorders and family therapy.</p>
+          <a href="https://arabtherapy.com/en/team/Ayoub-Bouazizi" target="_blank">Contact Me</a>
+        </div>
       </div>
-    </div>
 
-    <div class="doctor-card">
-      <img src="../assests/doc4.png" alt="Hala">
-      <div class="doctor-info">
-        <h2>Dr. Hala Zubidah</h2>
-        <p>Dr. Hala Zubaida PhD in Psychology, Educational and Social Sciences, and Family Education Sciences (Children, Adolescents, Adults, Couples).</p>
-        <a href="https://arabtherapy.com/en/team/dr-hala-zubidah" target="_blank">Contact Me</a>
+      <div class="doctor-card">
+        <img src="../assests/653f9479b623a.png" alt="Ali">
+        <div class="doctor-info">
+          <h3>Dr. Ali El Nabawy</h3>
+          <p>Holds German fellowship in psychiatry and addiction psychiatry, specializing in depression, anxiety, sleep disorders (insomnia), and addiction treatment.</p>
+          <a href="https://arabtherapy.com/en/team/Ali-Elnabawy" target="_blank">Contact Me</a>
+        </div>
       </div>
+
+      <div class="doctor-card">
+        <img src="../assests/64be1b832acfe.png" alt="Mariam">
+        <div class="doctor-info">
+          <h3>Miriam Qandil</h3>
+          <p>Clinical psychologist specializing in psychological disorders and trauma in psychoanalytic therapy and cognitive behavioral therapy.</p>
+          <a href="https://arabtherapy.com/en/team/Miriam-Qandil" target="_blank">Contact Me</a>
+        </div>
+      </div>
+
+      <div class="doctor-card">
+        <img src="../assests/doc4.png" alt="Hala">
+        <div class="doctor-info">
+          <h3>Dr. Hala Zubidah</h3>
+          <p>PhD in Psychology, Educational and Social Sciences, and Family Education Sciences (Children, Adolescents, Adults, Couples).</p>
+          <a href="https://arabtherapy.com/en/team/dr-hala-zubidah" target="_blank">Contact Me</a>
+        </div>
+      </div>
+
     </div>
   </div>
-</div>
 
-
-
-
-<section style="background-color: #ffffff; padding: 40px; max-width: 900px; margin: 40px auto; border-radius: 10px;">
+  <section>
     <h2 style="text-align:center; color:#34645a; margin-bottom: 20px;">How to Book an Appointment in Jordan</h2>
-    <p style="font-size: 16px; line-height: 1.6; text-align: justify;">
-        If you live in Jordan and want to book a session with a mental health clinic or counselor, follow these steps:
-    </p>
-    <ol style="font-size: 16px; line-height: 1.8; margin-left: 20px;">
-        <li>Choose the clinic or therapist that suits your needs.</li>
-        <li>Call the clinic directly or visit their official website to check available times.</li>
-        <li>Ask about the session price and available packages.</li>
-        <li>Confirm your booking via phone or online form.</li>
-        <li>Arrive 10–15 minutes before your appointment for registration.</li>
+    <p>If you live in Jordan and want to book a session with a mental health clinic or counselor, follow these steps:</p>
+    <ol>
+      <li>Choose the clinic or therapist that suits your needs.</li>
+      <li>Call the clinic directly or visit their official website to check available times.</li>
+      <li>Ask about the session price and available packages.</li>
+      <li>Confirm your booking via phone or online form.</li>
+      <li>Arrive 10–15 minutes before your appointment for registration.</li>
     </ol>
     <h3 style="color:#34645a; margin-top: 20px;">Recommended Clinics in Jordan</h3>
-    <ul style="font-size: 16px; line-height: 1.8; margin-left: 20px;">
-        <li><a href="https://www.facebook.com/TawazonCenter/" target="_blank" style="color:#1e1e2f; text-decoration:none;">Tawazon Center – Amman</a> | 📞 +962 7 9555 1234</li>
-        <li><a href="https://www.facebook.com/Darajainstitute/" target="_blank" style="color:#1e1e2f; text-decoration:none;">Daraja Mental Health Center</a> | 📞 +962 6 585 7750</li>
-        <li><a href="https://www.arabtherapy.com" target="_blank" style="color:#1e1e2f; text-decoration:none;">Arab Therapy (Online & Amman)</a> | Booking via website</li>
+    <ul>
+      <li><a href="https://www.facebook.com/TawazonCenter/" target="_blank">Tawazon Center – Amman</a> | 📞 +962 7 9555 1234</li>
+      <li><a href="https://www.facebook.com/Darajainstitute/" target="_blank">Daraja Mental Health Center</a> | 📞 +962 6 585 7750</li>
+      <li><a href="https://www.arabtherapy.com" target="_blank">Arab Therapy (Online & Amman)</a> | Booking via website</li>
     </ul>
     <p style="margin-top: 15px; font-size: 15px; color: #555;">
-        Tip: In Jordan, many clinics also accept WhatsApp booking for faster communication.
+      Tip: In Jordan, many clinics also accept WhatsApp booking for faster communication.
     </p>
-</section>
+  </section>
 
- <footer>
-        <p>© 2025 Tawazon Center. All rights reserved.</p>
-    </footer>
+  <footer>
+    <p>© 2025 Tawazon Center. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
